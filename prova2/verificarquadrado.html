@@ -1,0 +1,67 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Verificar Quadrado</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4287f5;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #cor-aleatoria {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+
+      function verificarQuadradoPerfeito() {
+    var numeroInput = parseFloat(prompt("Digite um número"));
+
+    var raiz = Math.sqrt(numeroInput);
+    var raizArredondadaCima = Math.ceil(raiz);
+    var raizArredondadaBaixo = Math.floor(raiz);
+
+    if (numeroInput == raiz ** 2) {
+        if (raizArredondadaBaixo == raizArredondadaCima) {
+            alert('O número é um quadrado perfeito!');
+        } else {
+            alert('O número não é um quadrado perfeito!');
+        }
+    } else {
+        alert('O número não é um quadrado perfeito!');
+    }
+}  
+
+    </script>
+</head>
+
+<body>
+    <button onclick="verificarQuadradoPerfeito()">Verificar Quadrado Perfeito</button>
+    <div id="cor-aleatoria"></div>
+</body>
+
+</html>
