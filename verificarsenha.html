@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Verificar senha</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4287f5;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #cor-aleatoria {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+       
+       function verificarsenha() {
+    var senha = prompt("Digite sua senha.");
+
+    if (senha.length < 8) {
+        alert('Sua senha deve possuir no mínimo 8 caracteres');
+        return;
+    }
+
+    if (!/[a-z]/.test(senha)) {
+        alert('Sua senha deve possuir no mínimo uma letra minúscula');
+        return;
+    }
+
+    if (!/[A-Z]/.test(senha)) {
+        alert('Sua senha deve possuir no mínimo uma letra maiúscula');
+        return;
+    }
+
+    if (!/\d/.test(senha)) {
+        alert('Sua senha deve possuir no mínimo um número');
+        return;
+    }
+
+    alert('Sua senha é válida!');
+}
+
+
+
+    </script>
+</head>
+
+<body>
+    <button onclick="verificarsenha()">Verificar senha</button>
+    <div id="cor-aleatoria"></div>
+</body>
+
+</html>
