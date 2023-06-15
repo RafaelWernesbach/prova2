@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calcular Fatorial</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4287f5;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #cor-aleatoria {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+     
+     function calcularFatorial() {
+      var numero = parseInt(prompt("Digite um número inteiro positivo:"));
+      
+      // Verifica se o número é válido
+      if (isNaN(numero) || numero < 0) {
+        alert("Número inválido. Digite um número inteiro positivo.");
+        return;
+      }
+
+      var fatorial = 1;
+
+      // Calcula o fatorial
+      for (var i = 1; i <= numero; i++) {
+        fatorial *= i;
+      }
+
+      alert("O fatorial de " + numero + " é: " + fatorial);
+    }
+
+    </script>
+</head>
+
+<body>
+    <button onclick="calcularFatorial()">Calcular Fatorial</button>
+    <div id="cor-aleatoria"></div>
+</body>
+
+</html>
